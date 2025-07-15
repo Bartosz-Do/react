@@ -1,25 +1,27 @@
+import React from 'react';
+
+function AddOne() {
+  let value = parseInt(document.getElementById('counter').innerHTML);
+  value++;
+
+  document.getElementById('counter').innerHTML = value;
+}
+
+function SubOne() {
+  let value = parseInt(document.getElementById('counter').innerHTML);
+  value--;
+  document.getElementById('counter').innerHTML = value;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> Bartek
-      </header>
-      <button>Click me</button>
+    <div>
+      <div id={"counter"}>0</div>
+      <button onClick={AddOne}>+</button>
+      <button onClick={SubOne}>-</button>
     </div>
-    
-  );
+  )
 }
+
 
 export default App;
