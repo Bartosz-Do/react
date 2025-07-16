@@ -1,27 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function AddOne() {
-  let value = parseInt(document.getElementById('counter').innerHTML);
-  value++;
-
-  document.getElementById('counter').innerHTML = value;
-}
-
-function SubOne() {
-  let value = parseInt(document.getElementById('counter').innerHTML);
-  value--;
-  document.getElementById('counter').innerHTML = value;
-}
 
 function App() {
+  let [count, setCount] = useState(0);
+
   return (
     <div>
-      <div id={"counter"}>0</div>
-      <button onClick={AddOne}>+</button>
-      <button onClick={SubOne}>-</button>
+      <div>
+        {count}
+      </div>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
     </div>
-  )
+  );
 }
-
 
 export default App;
