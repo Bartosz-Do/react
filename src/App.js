@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
       <Counter />
-      <Counter />
-      <Counter />
-      <Counter />
+      <Counter initialCount={10} />
+      <Counter increment={2} />
+      <Counter initialCount={-100} increment={20} />
     </div>
   );
 }
