@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Counter from './Counter';
 
 
 function App() {
-  let [count, setCount] = useState(0);
 
   return (
     <div>
-      <div>
-        {count}
-      </div>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
-      <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
     </div>
   );
 }
