@@ -12,6 +12,7 @@ function Counter({initialCount = 0, increment = 1, ...rest}) {
             </div>
             <button disabled={count === max} onClick={() => setCount(prevCount => prevCount + increment)}>+</button>
             <button disabled={count === min} onClick={() => setCount(prevCount => prevCount - increment)}>-</button>
+            <button onClick={() => setCount(initialCount)}>Reset</button>
         </div>
     );
 }
