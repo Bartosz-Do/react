@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
-function Counter({initialCount = 0, increment = 1, ...rest}) {
+function Counter({initialCount = 0, increment = 1, onChangeCount, name, ...rest}) {
     const [count, setCount] = useState(initialCount);
+
+    useEffect(() => {
+        onChangeCount(prev => ({ ...prev, [name]: count }));
+    }, [count, onChangeCount, name]);
     
     const max = rest.max;
     const min = rest.min;
