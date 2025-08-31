@@ -1,0 +1,29 @@
+.div {
+    margin: 5px;
+}
+
+.dodatnia {
+    color: lightgreen;
+}
+
+.ujemna {
+    color: red;
+}
+
+.dodac {
+    border-radius: 10px;
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.odjac {
+    border-radius: 10px;
+    background-color: red;
+    color: black;
+}
+
+.reset {
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
